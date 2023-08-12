@@ -30,7 +30,7 @@ namespace HdO.Controllers
 
             ConnectionMultiplexer redis = ConnectionMultiplexer.Connect(config);
             IDatabase db = redis.GetDatabase();
-            db.StringSet("foo", "Testado");
+            db.StringSet("test", "Testado");
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
