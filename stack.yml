@@ -1,11 +1,11 @@
 version: '3.4'
 
 services:
-  hdo:
-    image: devgiovannifernandes/ggg
+  hdogiovanni:
+    image: devgiovannifernandes/giovanni
     ports:
-      - 54981:80
-      - 54982:443
+      - 54900:80
+      - 54901:443
     networks:
         - t2s
 networks:
