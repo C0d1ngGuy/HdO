@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name : Nome 1
+  name : Giovanni
 
 variables:
   solution: '**/*.sln'
@@ -19,7 +19,7 @@ steps:
   inputs:
     buildContext: '$(Build.Repository.LocalPath)'
     containerRegistry: 'DockerHdO'
-    repository: 'devgiovannifernandes/ggg'
+    repository: 'devgiovannifernandes/giovanni'
     command: 'buildAndPush'
     tags: |
       latest
