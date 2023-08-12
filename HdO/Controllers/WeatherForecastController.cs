@@ -24,7 +24,7 @@ namespace HdO.Controllers
         {
             var config = new ConfigurationOptions
             {
-                EndPoints = { "tasks.redis2" },
+                EndPoints = { "redis2" },
                 Password = "t2sSenha"
             };
 
