@@ -6,3 +6,8 @@ services:
     ports:
       - 54981:80
       - 54982:443
+    networks:
+        - t2s
+networks:
+  t2s:
+   external: true
