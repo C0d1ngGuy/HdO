@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using StackExchange.Redis;
 
 namespace HdO.Controllers
 {
@@ -21,6 +22,16 @@ namespace HdO.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            var config = new ConfigurationOptions
+            {
+                EndPoints = { "redis2" },
+                Password = "t2sSenha"
+            };
+
+            ConnectionMultiplexer redis = ConnectionMultiplexer.Connect(config);
+            IDatabase db = redis.GetDatabase();
+            db.StringSet("foo", "Testado");
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

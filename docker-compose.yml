@@ -6,3 +6,8 @@ services:
     build:
       context: .
       dockerfile: HdO/Dockerfile
+    networks:
+        - t2s
+networks:
+  t2s:
+   external: true
