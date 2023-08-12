@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   hdo:
-    image: devgiovannifernandes/hdo
+    image: devgiovannifernandes/ggg
     ports:
       - 54981:80
       - 54982:443
