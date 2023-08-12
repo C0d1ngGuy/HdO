@@ -17,6 +17,7 @@ variables:
 steps:
 - task: Docker@2
   inputs:
+    buildContext: '$(Build.Repository.LocalPath)'
     containerRegistry: 'DockerHdO'
     repository: 'devgiovannifernandes/ggg'
     command: 'buildAndPush'
