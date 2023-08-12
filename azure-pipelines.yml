@@ -21,6 +21,8 @@ steps:
     containerRegistry: 'DockerHdO'
     repository: 'devgiovannifernandes/ggg'
     command: 'buildAndPush'
+    tags: |
+      latest
     Dockerfile: '**/Dockerfile'
 - publish: $(System.DefaultWorkingDirectory)/stack.yml
   artifact: compose
