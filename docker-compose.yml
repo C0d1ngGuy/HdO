@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  hdo:
+    image: ${DOCKER_REGISTRY-}hdo
+    build:
+      context: .
+      dockerfile: HdO/Dockerfile
